@@ -7,6 +7,10 @@ def validation(dni):
         print("El número de DNI debe tener 7 u 8 dígitos.")
         return False
     return True
+#Ejercicio 2
+def last_phrase (phrase):
+    words=phrase.split() [-1]
+    return words
 
 #Ejericicio 3
 def dni_validator(dni):
@@ -65,3 +69,43 @@ def login (username, password):
         return True
     else:
         return False
+#Ejercicio 10
+def aply_discount(prices):
+    final_price=0
+    shopping_cart=float(input("Ingrese el monto total de su carrito de compra: "))
+    if shopping_cart<=0:
+        print("¡ERROR! El valor ingresado no es válido")
+        aply_discount(prices)
+    else:    
+        if shopping_cart>=2000 and shopping_cart<4000:
+            discount=(shopping_cart*prices[2000])/100
+            final_price=shopping_cart-discount
+            print(f"Por el monto de su carrito obtiene un descuento del {prices[2000]}%")
+
+        elif shopping_cart>=4000 and shopping_cart<6000:
+            discount=(shopping_cart*prices[4000])/100
+            final_price=shopping_cart-discount
+            print(f"Por el monto de su carrito obtiene un descuento del {prices[4000]}%")
+
+        elif shopping_cart>=6000:
+            discount=(shopping_cart*prices[6000])/100
+            final_price=shopping_cart-discount
+            print(f"Por el monto de su carrito obtiene un descuento del {prices[6000]}%")
+
+        else:
+            final_price=shopping_cart
+            print(f"Por el monto de su carrito no obtiene ningún descuento")
+
+        return final_price
+    
+#Ejercicio 11
+def aply_function(func, numbers):
+    results=[]
+    
+    for num in numbers:
+        results.append(func(num))
+    
+    return results
+def multiply_by_two(num):
+    
+    return num*2

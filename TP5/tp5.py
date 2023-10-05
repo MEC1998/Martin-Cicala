@@ -8,12 +8,10 @@ while True:
     if funciones_tp5.validation(dni):
         print("El documento ingresado es válido")
         break
-"""
 
 #Ejericicio 2
-
-
-"""
+phrase=str(input("Ingrese una frase: ").lower())
+print(f"La ultima palabra de su frase es \"{funciones_tp5.last_phrase(phrase)}\"")
 
 #Ejericico 3
 print("BIENVENIDO\nPara registrarse siga los pasos")
@@ -78,6 +76,21 @@ while attempt>0:
 
 if attempt==0:
     print("Has agotado tus intentos")
-"""
         
-#Ejericicio 10
+#Ejercicio 10
+prices={2000:10, 4000:20, 6000:30}
+
+print(f"El precio final de su carrito es de {funciones_tp5.aply_discount(prices)}")
+
+#Ejercicio 11
+numbers=[2,6,10,43,84]
+
+results=funciones_tp5.aply_function(funciones_tp5.multiply_by_two, numbers)
+
+for i in range(len(numbers)):
+    print(f"{numbers[i]} multiplicado por 2 es igual a {results[i]}")
+"""
+
+#Ejercicio 12
+
+#Ejercicio 14
