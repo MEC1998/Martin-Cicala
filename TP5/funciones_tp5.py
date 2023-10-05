@@ -1,4 +1,4 @@
-#EJericio 1
+#Ejericio 1
 def validation(dni):
     if not dni.isdigit():
         print("El documento ingresado no es válido. Debe contener solo números.")
@@ -109,3 +109,11 @@ def aply_function(func, numbers):
 def multiply_by_two(num):
     
     return num*2
+
+#Ejercicio 13
+import math
+
+def calculate_module(vector):
+    x, y, z = vector
+    module = math.sqrt(x**2 + y**2 + z**2)
+    return module

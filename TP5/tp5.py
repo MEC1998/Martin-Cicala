@@ -93,4 +93,10 @@ for i in range(len(numbers)):
 
 #Ejercicio 12
 
-#Ejercicio 14
+#Ejercicio 13
+vector = (3, 4, 5)
+
+module = funciones_tp5.calculate_module(vector)
+
+print("El módulo del vector es:", module)
+
