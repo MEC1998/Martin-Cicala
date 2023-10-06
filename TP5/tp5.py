@@ -1,7 +1,6 @@
 #TRABAJO PRÁCTICO 5
 import funciones_tp5
 #Ejercicio 1
-"""
 
 while True:
     dni = input("Ingrese su N° de DNI: ")
@@ -53,8 +52,15 @@ phrase=input("Ingrese una frase: ")
 print(funciones_tp5.enter_space(phrase))
 
 #Ejercicio 7
-nums=[5]
-print(f"{funciones_tp5.number_comparator(funciones_tp5.fill_list(nums))} es el mayor número ingresado")
+nums=funciones_tp5.fill_list()
+result=funciones_tp5.number_comparator(nums)
+
+if result:
+    max_num, min_num=result
+    print(f"El número máximo ingresado es: {max_num}")
+    print(f"El número mínimo ingresado es: {min_num}")
+else:
+    print("No se ingresaron números.")
 
 #Ejericicio 8
 radio=float(input("Ingrese el valor del radio de una circunferencia (en centimetros): "))
@@ -89,9 +95,10 @@ results=funciones_tp5.aply_function(funciones_tp5.multiply_by_two, numbers)
 
 for i in range(len(numbers)):
     print(f"{numbers[i]} multiplicado por 2 es igual a {results[i]}")
-"""
 
 #Ejercicio 12
+phrase=input("Ingrese una frase: ")
+print(funciones_tp5.separate_phrase(phrase))
 
 #Ejercicio 13
 vector = (3, 4, 5)
@@ -100,3 +107,46 @@ module = funciones_tp5.calculate_module(vector)
 
 print("El módulo del vector es:", module)
 
+#Ejercicio 14
+num=int(input("Ingrese un número: "))
+
+if funciones_tp5.is_prime(num)==True:
+    print(f"{num} es primo")
+else:
+    print(f"{num} no es primo")
+
+#Ejercicio 15
+nums=[]
+funciones_tp5.list_filler(nums)
+
+print("Factoriales de los números ingresados: ")
+for num in nums:
+    factorial=funciones_tp5.factorial_calculator(num)
+    print(f"El factorial de {num} es {factorial}")
+
+print(f"Se leyeron {len(nums)} números en total")
+
+#Ejercicio 16
+num=int(input("Ingrese un número: "))
+digit=int(input("Ingrese un digito: "))
+
+print(f"El número {digit} se repite {funciones_tp5.frequency(num, digit)} veces en {num}")
+
+#Ejercicio 17
+max_num=0
+
+while True:
+    num=int(input("Ingrese un número primo: "))
+    if funciones_tp5.is_prime(num):
+       if num>max_num:
+           max_num=num
+       
+       print(f"La suma de los dígitos de {num} es {funciones_tp5.sum_of_digit(num)}")
+       digit=int(input("Ingrese un dígito: "))
+       print(f"El número {digit} se repite {funciones_tp5.frequency(num, digit)} veces en {num}")
+    else:
+        break
+
+factorial=funciones_tp5.factorial_calculator(max_num)
+print(f"El mayor número ingresado fue {max_num}")
+print(f"El factorial de {max_num} es {factorial}")

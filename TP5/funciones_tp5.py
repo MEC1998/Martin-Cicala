@@ -42,18 +42,25 @@ def enter_space (phrase):
     return new_phrase
 
 #Ejericicio 7
-def fill_list(nums):
-    for i in range(5):
+def fill_list():
+    nums=[]
+    n=int(input("Ingrese la cantidad de números que desea ingresar: "))
+    for i in range(n):
         num=float(input("Ingrese un número: "))
         nums.append(num)
     return nums
 
 def number_comparator(nums):
-    max_num=0
-    for i in nums:
-        if i>max_num:
-            max_num=i
-    return max_num
+    if not nums:
+        return None
+    
+    max_num=min_num=nums[0]
+    for num in nums:
+        if num>max_num:
+            max_num=num
+        elif num<min_num:
+            min_num=num
+    return max_num, min_num
 
 #Ejericico 8
 import math
@@ -109,6 +116,15 @@ def aply_function(func, numbers):
 def multiply_by_two(num):
     
     return num*2
+#Ejercicio 12
+def separate_phrase(phrase):
+    words={}
+    key=1
+    
+    for element in phrase.split():
+        words[key]=element
+        key+=1
+    return words
 
 #Ejercicio 13
 import math
@@ -117,3 +133,49 @@ def calculate_module(vector):
     x, y, z = vector
     module = math.sqrt(x**2 + y**2 + z**2)
     return module
+
+#Ejercicio 14
+def is_prime(num):
+    counter=0
+    for i in range(1,num+1):
+        if num%i==0:
+            counter+=1
+    
+    if counter==2:
+        return True
+    else:
+        return False
+
+#Ejercicio 15
+def list_filler(nums):
+    num=1
+    while num!=0:
+        num=int(input("Ingrese un número, para dejar de ingresar números ingrese 0(cero): "))
+        if num!=0:
+            nums.append(num)
+    return nums
+
+def factorial_calculator(num):
+    if num==0:
+        return 1
+    else:
+        return num*factorial_calculator(num-1)
+
+#Ejercicio 16
+def frequency(num, digit):
+    num_str=str(num)
+    digit_str=str(digit)
+    counter=0
+
+    for i in num_str:
+        if i==digit_str:
+            counter+=1
+    return counter
+
+#Ejercicio 17
+def sum_of_digit(num):
+        digits_sum=0
+        num_str=str(num)
+        for i in num_str:
+            digits_sum+=int(i)
+        return digits_sum
