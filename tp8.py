@@ -248,7 +248,6 @@ while True:
     except ValueError:
         #Captura la excepción si el usuario ingresa algo que no es un número entero
         print("Por favor, ingrese números enteros válidos.")
-"""
 
 #Ejercicio 9
 #Definición de la función recursiva que genera combinaciones de longitud k
@@ -290,8 +289,6 @@ while True:
     except ValueError:
         print("¡ERROR! Ingrese un número válido")
 
-
-"""
 #Ejercicio 10
 #Definición de la función sheet_size_A que calcula las dimensiones de una hoja A(N)
 def sheet_size_A(n):
